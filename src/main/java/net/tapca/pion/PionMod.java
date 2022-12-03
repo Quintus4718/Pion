@@ -17,6 +17,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tapca.pion.items.ModItems;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import top.theillusivec4.curios.api.SlotTypeMessage;
+import top.theillusivec4.curios.api.SlotTypePreset;
 
 import java.util.stream.Collectors;
 
@@ -59,8 +61,8 @@ public class PionMod
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
-        // some example code to dispatch IMC to another mod
-        InterModComms.sendTo("examplemod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE,
+                () -> SlotTypePreset.NECKLACE.getMessageBuilder().build());
     }
 
     private void processIMC(final InterModProcessEvent event)

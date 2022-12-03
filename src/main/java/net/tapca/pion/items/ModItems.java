@@ -14,7 +14,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, PionMod.MOD_ID);
 
     public static final RegistryObject<Item> AMULET_T1 = ITEMS.register("amulet_t1",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(1)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP).maxStackSize(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

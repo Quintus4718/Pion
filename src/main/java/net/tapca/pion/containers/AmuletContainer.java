@@ -17,25 +17,24 @@ import net.tapca.pion.items.custom.Amulet;
 public class AmuletContainer extends Container {
     private final PlayerEntity playerEntity;
     private final IItemHandler playerInventory;
-    private final ItemStack amulet;
+
 
     public AmuletContainer(int windowId, World world, PlayerEntity playerEntity,
-                           PlayerInventory playerInventory, ItemStack amulet) {
+                           PlayerInventory playerInventory) {
         super(ModContainers.AMULET_CONTAINER.get(), windowId);
         this.playerEntity = playerEntity;
         this.playerInventory = new InvWrapper(playerInventory);
-        this.amulet = amulet;
 
-        layoutPlayerInventorySlots( 8, 86);
+        layoutPlayerInventorySlots(8, 86);
 
-        if(amulet.getItem() == ModItems.AMULET.get());
-            addSlot(new SlotItemHandler(this.playerInventory,0,80,31));
+        addSlot(new SlotItemHandler(this.playerInventory, 0, 80, 31));
+
     }
 
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
-        return (playerEntity.inventory.getCurrentItem() == amulet);
+        return true;
     }
 
     private int addSlotRange(IItemHandler handler, int index, int x, int y, int amount, int dx) {

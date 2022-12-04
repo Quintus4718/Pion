@@ -16,10 +16,10 @@ public class ModContainers {
             = DeferredRegister.create(ForgeRegistries.CONTAINERS, PionMod.MOD_ID);
 
     public static final RegistryObject<ContainerType<AmuletContainer>> AMULET_CONTAINER
-            = CONTAINERS.register("pion:amulet_container",
+            = CONTAINERS.register("pion_amulet_container",
             () -> IForgeContainerType.create(((windowId, inv, data) -> {
                 World world = inv.player.getEntityWorld();
-                return new AmuletContainer(windowId, world, inv.player, inv, inv.getCurrentItem());
+                return new AmuletContainer(windowId, world, inv.player, inv);
 
             })));
 

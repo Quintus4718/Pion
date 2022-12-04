@@ -2,6 +2,7 @@ package net.tapca.pion;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tapca.pion.containers.ModContainers;
 import net.tapca.pion.items.ModItems;
+import net.tapca.pion.screens.AmuletScreen;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import top.theillusivec4.curios.api.SlotTypeMessage;
@@ -59,7 +61,10 @@ public class PionMod
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+
+        ScreenManager.registerFactory(ModContainers.AMULET_CONTAINER.get(), AmuletScreen::new);
     }
+
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {

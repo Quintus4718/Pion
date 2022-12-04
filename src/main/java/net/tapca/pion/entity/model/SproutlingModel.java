@@ -9,9 +9,8 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.ZombieEntity;
-import net.tapca.pion.entity.custom.SproutlingEntity;
 
-public class SproutlingModel<T extends SproutlingEntity> extends EntityModel<T> {
+public class SproutlingModel<S extends ZombieEntity> extends EntityModel<Entity> {
 	private final ModelRenderer head;
 	private final ModelRenderer cube_r1;
 	private final ModelRenderer cube_r2;
@@ -22,7 +21,7 @@ public class SproutlingModel<T extends SproutlingEntity> extends EntityModel<T> 
 	private final ModelRenderer cube_r7;
 	private final ModelRenderer bb_main;
 
-	public custom_model() {
+	public SproutlingModel() {
 		textureWidth = 72;
 		textureHeight = 56;
 
@@ -96,5 +95,4 @@ public class SproutlingModel<T extends SproutlingEntity> extends EntityModel<T> 
 		modelRenderer.rotateAngleY = y;
 		modelRenderer.rotateAngleZ = z;
 	}
-
 }

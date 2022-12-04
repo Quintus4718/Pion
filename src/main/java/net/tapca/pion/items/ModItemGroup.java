@@ -8,7 +8,7 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon() {
 
-            return new ItemStack(ModItems.AMULET_T1.get());
+            return new ItemStack(ModItems.AMULET.get());
         }
     };
 }

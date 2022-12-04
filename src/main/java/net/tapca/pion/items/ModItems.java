@@ -19,6 +19,9 @@ public class ModItems {
     public static final RegistryObject<Item> SPROUTLING_SEED = ITEMS.register("sproutling_seed",
             () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP)));
 
+    public static final RegistryObject<Item> SPROUTLING_GEM = ITEMS.register("sproutling_gem",
+            () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

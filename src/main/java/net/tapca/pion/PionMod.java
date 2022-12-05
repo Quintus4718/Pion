@@ -16,7 +16,6 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tapca.pion.containers.ModContainers;
-import net.tapca.pion.entity.ModEntityTypes;
 import net.tapca.pion.items.ModItems;
 import net.tapca.pion.screens.AmuletScreen;
 import org.apache.logging.log4j.LogManager;
@@ -49,8 +48,6 @@ public class PionMod
         eventBus.addListener(this::processIMC);
         // Register the doClientStuff method for modloading
         eventBus.addListener(this::doClientStuff);
-
-        ModEntityTypes.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

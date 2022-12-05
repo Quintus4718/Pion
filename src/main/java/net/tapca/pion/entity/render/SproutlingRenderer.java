@@ -1,10 +1,7 @@
 package net.tapca.pion.entity.render;
 
-import com.mojang.blaze3d.matrix.MatrixStack;
-import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.util.ResourceLocation;
@@ -12,7 +9,7 @@ import net.tapca.pion.PionMod;
 import net.tapca.pion.entity.custom.SproutlingEntity;
 import net.tapca.pion.entity.model.*;
 
-public class SproutlingRenderer extends MobRenderer<SproutlingEntity, EntityModel<SproutlingEntity>>{
+public class SproutlingRenderer extends MobRenderer<SproutlingEntity, SproutlingModel<SproutlingEntity>>{
     protected static final ResourceLocation TEXTURE =
             new ResourceLocation(PionMod.MOD_ID, "textures/entity/sproutling.png");
 

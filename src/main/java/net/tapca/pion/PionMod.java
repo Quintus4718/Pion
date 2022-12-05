@@ -8,6 +8,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -16,6 +17,8 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tapca.pion.containers.ModContainers;
+import net.tapca.pion.entities.ModEntityTypes;
+import net.tapca.pion.entities.render.SproutlingRenderer;
 import net.tapca.pion.items.ModItems;
 import net.tapca.pion.screens.AmuletScreen;
 import org.apache.logging.log4j.LogManager;
@@ -40,6 +43,7 @@ public class PionMod
 
         ModItems.register(eventBus);
         ModContainers.register(eventBus);
+        ModEntityTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -63,6 +67,8 @@ public class PionMod
     private void doClientStuff(final FMLClientSetupEvent event) {
 
         ScreenManager.registerFactory(ModContainers.AMULET_CONTAINER.get(), AmuletScreen::new);
+
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.SPROUTLING.get(), SproutlingRenderer::new);
     }
 
 

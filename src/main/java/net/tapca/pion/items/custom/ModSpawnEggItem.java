@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class ModSpawnEggItem extends SpawnEggItem {
 
-    protected static final ArrayList<ModSpawnEggItem> UNADDED_EGGS = new ArrayList<>();
+    protected static final List<ModSpawnEggItem> UNADDED_EGGS = new ArrayList<>();
     private final Lazy<? extends EntityType<?>> entityTypeSupplier;
 
     public ModSpawnEggItem(final RegistryObject<? extends EntityType<?>> entityTypeSupplier,

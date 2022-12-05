@@ -8,10 +8,8 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.monster.ZombieEntity;
-import net.tapca.pion.entity.custom.SproutlingEntity;
 
-public class SproutlingModel<T extends SproutlingEntity> extends EntityModel<T> {
+public class custom_model extends EntityModel<Entity> {
 	private final ModelRenderer head;
 	private final ModelRenderer cube_r1;
 	private final ModelRenderer cube_r2;
@@ -96,5 +94,4 @@ public class SproutlingModel<T extends SproutlingEntity> extends EntityModel<T> 
 		modelRenderer.rotateAngleY = y;
 		modelRenderer.rotateAngleZ = z;
 	}
-
 }

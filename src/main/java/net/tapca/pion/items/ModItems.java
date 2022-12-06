@@ -26,6 +26,13 @@ public class ModItems {
     public static final RegistryObject<Item> SPROUTLING_GEM = ITEMS.register("sproutling_gem",
             () -> new SproutlingGem(new SproutlingGem.Properties().group(ModItemGroup.PION_GROUP)));
 
+    public static final RegistryObject<Item> DECAY_GEM = ITEMS.register("decay_gem",
+            () -> new SproutlingGem(new SproutlingGem.Properties().group(ModItemGroup.PION_GROUP)));
+
+    public static final RegistryObject<Item> WATER_GEM = ITEMS.register("water_gem",
+            () -> new SproutlingGem(new SproutlingGem.Properties().group(ModItemGroup.PION_GROUP)));
+
+
     public static final RegistryObject<Item> SPROUTLING_SPAWN_EGG = ITEMS.register("sproutling_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.SPROUTLING, 0xf8fab6, 0xdee23c,
                     new Item.Properties().maxStackSize(64).group(ModItemGroup.PION_GROUP)));

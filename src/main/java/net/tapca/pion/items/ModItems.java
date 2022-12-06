@@ -32,6 +32,9 @@ public class ModItems {
     public static final RegistryObject<Item> WATER_GEM = ITEMS.register("water_gem",
             () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP).maxStackSize(1)));
 
+    public static final RegistryObject<Item> TEEM_BOMB = ITEMS.register("teem_bomb",
+            () -> new TeemBomb(new Item.Properties().group(ModItemGroup.PION_GROUP).maxStackSize(16)));
+
 
     public static final RegistryObject<Item> SPROUTLING_SPAWN_EGG = ITEMS.register("sproutling_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.SPROUTLING, 0xf8fab6, 0xdee23c,

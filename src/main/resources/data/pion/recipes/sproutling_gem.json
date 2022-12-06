@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "Y#Y",
+    " X "
+  ],
+  "key": {
+    "#": {
+      "item": "pion:golden_sproutling_seed"
+    },
+    "X": {
+      "item": "minecraft:emerald"
+    },
+    "Y": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "pion:sproutling_gem"
+  }
+}

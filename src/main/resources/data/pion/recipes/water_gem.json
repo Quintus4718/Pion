@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "Y#Y",
+    " X "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "X": {
+      "item": "minecraft:emerald"
+    },
+    "Y": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "pion:water_gem"
+  }
+}

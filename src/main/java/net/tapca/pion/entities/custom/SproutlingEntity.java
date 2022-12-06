@@ -31,8 +31,7 @@ public class SproutlingEntity extends CowEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(1,new LookAtGoal(this, PlayerEntity.class, 20f));
-        this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.3D, 1));
+        this.goalSelector.addGoal(1, new RandomWalkingGoal(this, 0.7D, 1));
     }
 
     @Override

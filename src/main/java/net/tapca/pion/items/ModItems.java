@@ -18,19 +18,19 @@ public class ModItems {
             () -> new Amulet(new Item.Properties().group(ModItemGroup.PION_GROUP).maxStackSize(1)));
 
     public static final RegistryObject<Item> SPROUTLING_SEED = ITEMS.register("sproutling_seed",
-            () -> new SproutlingSeed(new SproutlingSeed.Properties().group(ModItemGroup.PION_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP)));
 
     public static final RegistryObject<Item> GOLDEN_SPROUTLING_SEED = ITEMS.register("golden_sproutling_seed",
-            () -> new GoldenSproutlingSeed(new GoldenSproutlingSeed.Properties().group(ModItemGroup.PION_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP)));
 
     public static final RegistryObject<Item> SPROUTLING_GEM = ITEMS.register("sproutling_gem",
-            () -> new SproutlingGem(new SproutlingGem.Properties().group(ModItemGroup.PION_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP).maxStackSize(1)));
 
     public static final RegistryObject<Item> DECAY_GEM = ITEMS.register("decay_gem",
-            () -> new SproutlingGem(new SproutlingGem.Properties().group(ModItemGroup.PION_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP).maxStackSize(1)));
 
     public static final RegistryObject<Item> WATER_GEM = ITEMS.register("water_gem",
-            () -> new SproutlingGem(new SproutlingGem.Properties().group(ModItemGroup.PION_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP).maxStackSize(1)));
 
 
     public static final RegistryObject<Item> SPROUTLING_SPAWN_EGG = ITEMS.register("sproutling_spawn_egg",

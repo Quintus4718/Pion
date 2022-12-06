@@ -1,0 +1,11 @@
+{
+  "itemGroup.PionTab": "Пион",
+  "item.pion.amulet": "Амулет",
+  "item.pion.sproutling_seed": "Прорастающее семя",
+  "item.pion.golden_sproutling_seed": "Золотое прорастающее семя",
+  "item.pion.sproutling_gem": "Прорастающий самоцвет",
+  "item.pion.water_gem": "Водный самоцвет",
+  "item.pion.decay_gem": "Распад драгоценного камня",
+  "item.pion.sproutling_spawn_egg": "Яйцо для икры",
+  "entity.pion.sproutling": "Проращивание"
+}

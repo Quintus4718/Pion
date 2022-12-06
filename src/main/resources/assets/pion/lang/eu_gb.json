@@ -1,4 +1,5 @@
 {
+  "itemGroup.PionTab": "Pion",
   "item.pion.amulet": "Amulet",
   "item.pion.sproutling_seed": "Sproutling Seed",
   "item.pion.golden_sproutling_seed": "Golden Sproutling Seed",
@@ -6,6 +7,5 @@
   "item.pion.water_gem": "Water Gem",
   "item.pion.decay_gem": "Decay Gem",
   "item.pion.sproutling_spawn_egg": "Sproutling Spawn Egg",
-  "itemGroup.PionTab": "Pion",
   "entity.pion.sproutling": "Sproutling"
 }

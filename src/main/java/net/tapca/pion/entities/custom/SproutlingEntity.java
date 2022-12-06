@@ -25,14 +25,14 @@ public class SproutlingEntity extends CowEntity {
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 10.0D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 2.0D);
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
     }
 
     @Override
     protected void registerGoals() {
         super.registerGoals();
         this.goalSelector.addGoal(1,new LookAtGoal(this, PlayerEntity.class, 20f));
-        this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 1.5D, 3));
+        this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.3D, 1));
     }
 
     @Override

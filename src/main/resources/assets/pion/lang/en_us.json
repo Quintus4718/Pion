@@ -2,5 +2,7 @@
   "item.pion.amulet": "Amulet",
   "item.pion.sproutling_seed": "Sproutling Seed",
   "item.pion.sproutling_gem": "Sproutling Gem",
-  "itemGroup.PionTab": "Pion"
+  "item.pion.sproutling_spawn_egg": "Sproutling Spawn Egg",
+  "itemGroup.PionTab": "Pion",
+  "entity.pion.sproutling": "Sproutling"
 }

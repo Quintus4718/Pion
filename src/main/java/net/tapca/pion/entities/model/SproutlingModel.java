@@ -9,7 +9,7 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.tapca.pion.entities.custom.SproutlingEntity;
 
-public class SproutlingModel <T extends SproutlingEntity> extends EntityModel<T> {
+public class SproutlingModel<T extends SproutlingEntity> extends EntityModel<T> {
 	private final ModelRenderer head;
 	private final ModelRenderer cube_r1;
 	private final ModelRenderer cube_r2;

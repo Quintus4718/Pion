@@ -38,7 +38,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> SPROUTLING_SPAWN_EGG = ITEMS.register("sproutling_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.SPROUTLING, 0xf8fab6, 0xdee23c,
-                    new Item.Properties().maxStackSize(64).group(ModItemGroup.PION_GROUP)));
+                    new Item.Properties().maxStackSize(3000).group(ModItemGroup.PION_GROUP)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

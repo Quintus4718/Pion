@@ -1,23 +1,27 @@
 package net.tapca.pion.entities.custom;
 
 
+import net.minecraft.block.BlockState;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.FlameParticle;
+import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.goal.LookAtGoal;
-import net.minecraft.entity.ai.goal.MoveToBlockGoal;
-import net.minecraft.entity.ai.goal.RandomWalkingGoal;
-import net.minecraft.entity.passive.CowEntity;
+import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 
-public class SproutlingEntity extends CowEntity {
+public class SproutlingEntity extends CreatureEntity {
 
-    public SproutlingEntity(EntityType<? extends CowEntity> type, World worldIn) {
+    public SproutlingEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
 
     }
@@ -52,5 +56,16 @@ public class SproutlingEntity extends CowEntity {
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
         return SoundEvents.BLOCK_BAMBOO_HIT;
+    }
+
+    @Override
+    protected void playStepSound(BlockPos pos, BlockState blockIn) {
+        super.playSound(SoundEvents.ENTITY_ZOGLIN_ANGRY, 0.15F, 1.0F);
+    }
+
+    @Override
+    public void livingTick() {
+
+        super.livingTick();
     }
 }

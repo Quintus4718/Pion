@@ -20,4 +20,5 @@ public class SproutlingRenderer extends MobRenderer<SproutlingEntity, Sproutling
     public ResourceLocation getEntityTexture(SproutlingEntity entity) {
         return TEXTURE;
     }
+    
 }

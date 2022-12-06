@@ -7,8 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.tapca.pion.PionMod;
 import net.tapca.pion.entities.ModEntityTypes;
-import net.tapca.pion.items.custom.Amulet;
-import net.tapca.pion.items.custom.ModSpawnEggItem;
+import net.tapca.pion.items.custom.*;
 
 public class ModItems {
 
@@ -19,10 +18,13 @@ public class ModItems {
             () -> new Amulet(new Item.Properties().group(ModItemGroup.PION_GROUP).maxStackSize(1)));
 
     public static final RegistryObject<Item> SPROUTLING_SEED = ITEMS.register("sproutling_seed",
-            () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP)));
+            () -> new SproutlingSeed(new SproutlingSeed.Properties().group(ModItemGroup.PION_GROUP)));
+
+    public static final RegistryObject<Item> GOLDEN_SPROUTLING_SEED = ITEMS.register("golden_sproutling_seed",
+            () -> new GoldenSproutlingSeed(new GoldenSproutlingSeed.Properties().group(ModItemGroup.PION_GROUP)));
 
     public static final RegistryObject<Item> SPROUTLING_GEM = ITEMS.register("sproutling_gem",
-            () -> new Item(new Item.Properties().group(ModItemGroup.PION_GROUP)));
+            () -> new SproutlingGem(new SproutlingGem.Properties().group(ModItemGroup.PION_GROUP)));
 
     public static final RegistryObject<Item> SPROUTLING_SPAWN_EGG = ITEMS.register("sproutling_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.SPROUTLING, 0xf8fab6, 0xdee23c,

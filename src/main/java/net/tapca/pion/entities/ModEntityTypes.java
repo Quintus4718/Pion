@@ -16,7 +16,7 @@ public class ModEntityTypes {
 
     public static final RegistryObject<EntityType<SproutlingEntity>> SPROUTLING =
             ENTITY_TYPES.register("sproutling", () -> EntityType.Builder.create(SproutlingEntity::new,
-                    EntityClassification.CREATURE).size(1f,3f)
+                    EntityClassification.CREATURE).size(0.5f,1f)
                     .build(new ResourceLocation(PionMod.MOD_ID, "sproutling").toString()));
 
     public static void register(IEventBus eventbus){

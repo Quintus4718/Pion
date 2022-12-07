@@ -3,7 +3,6 @@ package net.tapca.pion.entities.custom;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.AgeableEntity;
-import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -13,6 +12,7 @@ import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -24,8 +24,9 @@ import javax.annotation.Nullable;
 
 public class SproutlingEntity extends AnimalEntity {
 
-    public SproutlingEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
-        super((EntityType<? extends AnimalEntity>) type, worldIn);
+
+    public SproutlingEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
+        super(type, worldIn);
 
     }
 
@@ -79,9 +80,15 @@ public class SproutlingEntity extends AnimalEntity {
         return null;
     }
 
-    @Override
-    public void livingTick() {
 
-        super.livingTick();
+    //Attempted Particles, DON'T DELETE
+    @Override
+    public void tick() {
+         /*if ((0.2f < rand.nextFloat()) && (dead == false)) {
+            BlockPos pos = entityBlockPosition;
+            getEntityWorld().addParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY() - 0.1D,
+                    pos.getZ() + rand.nextDouble(), 0d, -0.5d, 0d);
+        }*/
+        super.tick();
     }
 }

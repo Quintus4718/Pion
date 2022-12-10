@@ -20,6 +20,7 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tapca.pion.containers.ModContainers;
 import net.tapca.pion.entities.ModEntityTypes;
+import net.tapca.pion.sounds.ModSoundEvents;
 import net.tapca.pion.entities.custom.SproutlingEntity;
 import net.tapca.pion.entities.render.SproutlingRenderer;
 import net.tapca.pion.items.ModItems;
@@ -47,6 +48,7 @@ public class PionMod
         ModItems.register(eventBus);
         ModContainers.register(eventBus);
         ModEntityTypes.register(eventBus);
+        ModSoundEvents.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading

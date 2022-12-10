@@ -5,7 +5,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
+import net.tapca.pion.sounds.ModSoundEvents;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 public class Amulet extends Item implements ICurioItem {
@@ -17,7 +19,6 @@ public class Amulet extends Item implements ICurioItem {
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-
         return super.onItemRightClick(worldIn, playerIn, handIn);
     }
 }

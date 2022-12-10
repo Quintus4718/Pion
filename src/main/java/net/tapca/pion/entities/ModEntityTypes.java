@@ -18,6 +18,10 @@ public class ModEntityTypes {
             ENTITY_TYPES.register("sproutling", () -> EntityType.Builder.create(SproutlingEntity::new,
                     EntityClassification.CREATURE).size(0.6f,2f)
                     .build(new ResourceLocation(PionMod.MOD_ID, "sproutling").toString()));
+    public static final RegistryObject<EntityType<SproutlingEntity>> TEEM_BOMB =
+            ENTITY_TYPES.register("teem_bomb", () -> EntityType.Builder.create(SproutlingEntity::new,
+                            EntityClassification.CREATURE).size(0.6f,2f)
+                    .build(new ResourceLocation(PionMod.MOD_ID, "teem_bomb").toString()));
 
     public static void register(IEventBus eventbus){
         ENTITY_TYPES.register(eventbus);

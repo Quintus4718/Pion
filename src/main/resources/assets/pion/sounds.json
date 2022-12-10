@@ -1,0 +1,9 @@
+{
+  "teem_bomb_throw": {
+    "category": "NEUTRAL",
+    "subtitle": "pion.teem_bomb_throw",
+    "sounds": [
+      "pion:teem_bomb_throw"
+    ]
+  }
+}

@@ -12,6 +12,7 @@ import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.particles.BlockParticleData;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
@@ -84,11 +85,11 @@ public class SproutlingEntity extends AnimalEntity {
     //Attempted Particles, DON'T DELETE
     @Override
     public void tick() {
-         /*if ((0.2f < rand.nextFloat()) && (dead == false)) {
-            BlockPos pos = entityBlockPosition;
-            getEntityWorld().addParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX(), pos.getY() - 0.1D,
-                    pos.getZ() + rand.nextDouble(), 0d, -0.5d, 0d);
-        }*/
+        float chance = 0.5f;
+        if (chance < rand.nextFloat() && dead == false) {
+            getEntityWorld().addParticle(ParticleTypes.HAPPY_VILLAGER, getPosX() + rand.nextDouble() - 0.5d, getPosY() + 0.5d,
+                    getPosZ() + rand.nextDouble() - 0.5d, 0d, -0.5d, 0d);
+        }
         super.tick();
     }
 }
